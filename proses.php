@@ -1,4 +1,20 @@
-<?php public function setHarga($tipe1, $tipe2, $tipe3, $tipe4) {
+<?php 
+class Shell {
+    protected $ppn;
+    //hanya digunakan oleh class dia dan turunan untuk memproses data
+    private $SSuper,
+            $SVPower,
+            $SVPowerDiesel,
+            $SVPowerNitro;
+    //dibuat private karena sdh ada getter yang akan menampilkan datanya
+    public $jumlah;
+    public $jenis;
+    //dibuat public karena nilai akan diisi dari luar
+
+    public function __construct() {
+        $this->ppn = 0.1;
+    }
+public function setHarga($tipe1, $tipe2, $tipe3, $tipe4) {
         $this->SSuper = $tipe1;
         $this->SVPower = $tipe2;
         $this->SVPowerDiesel = $tipe3;
@@ -33,23 +49,7 @@ class Beli extends Shell {
         echo "</center>";
     }
 }
-class Shell {
-    protected $ppn;
-    //hanya digunakan oleh class dia dan turunan untuk memproses data
-    private $SSuper,
-            $SVPower,
-            $SVPowerDiesel,
-            $SVPowerNitro;
-    //dibuat private karena sdh ada getter yang akan menampilkan datanya
-    public $jumlah;
-    public $jenis;
-    //dibuat public karena nilai akan diisi dari luar
-
-    public function __construct() {
-        $this->ppn = 0.1;
-    }
-
-   
+?>
 
 
 
